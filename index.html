@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bestill Bord - Italiensk Uke</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="#">Hjem</a>
+      <a href="#">Meny</a>
+      <a href="#">Bestill Bord</a>
+    </nav>
+
+    <div class="hero" id="hero">
+      <h1>Velkommen til vår nettside</h1>
+    </div>
+
+    <section class="about">
+      <h2 id="overskrift">Om Italiensk Uke</h2>
+      <p>
+        Under den internasjonale uken feirer vi kulturer fra hele verden, med et spesielt fokus på italiensk
+        mat og tradisjoner. Dette er din sjanse til å oppleve Italias rike kulturarv – fra smakfulle retter
+        til spennende tradisjoner og historier.
+      </p>
+      <p>
+        <strong>Italiensk Matopplevelse:</strong> Vårt kjøkken serverer autentiske italienske retter som
+        klassiske pastaretter, tynn og sprø pizza, deilige antipasti og tiramisù. Alle rettene er tilberedt
+        med ferske råvarer for å gi deg en ekte italiensk smaksopplevelse.
+      </p>
+      <p>
+        <strong>Italienske Tradisjoner:</strong> Internasjonal uke handler ikke bare om mat – det er også en
+        mulighet til å dykke dypere inn i italiensk kultur. Vi tilbyr kulturelle aktiviteter som
+        informasjonsplakater, musikk og kanskje til og med noen italienske uttrykk å lære.
+      </p>
+      <p>Kom og nyt smaken og kulturen fra Italia, og bli med på en uforglemmelig internasjonal uke!</p>
+    </section>
+    <section class="menu-section">
+      <h2>Vår Meny</h2>
+      <div class="menu-grid" id="menu-items">
+        <div class="menu-item" data-name="Pasta Carbonara" data-price="150" data-type="main">
+          <img src="Pasta Carbonara.jpg" alt="Pasta Carbonara" />
+          <h3>Pasta Carbonara</h3>
+          <p>Klassisk italiensk rett med pancetta og parmesan.</p>
+          <p><strong>Pris: 150 NOK</strong></p>
+          <button class="select-item">Velg denne hovedretten</button>
+        </div>
+        <div class="menu-item" data-name="Pizza Margherita" data-price="180" data-type="main">
+          <img src="Pizza Margherita.jpg" alt="Pizza Margherita" />
+          <h3>Pizza Margherita</h3>
+          <p>Italiensk pizza med ferske tomater og mozzarella.</p>
+          <p><strong>Pris: 180 NOK</strong></p>
+          <button class="select-item">Velg denne hovedretten</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="register-section">
+      <h2>Bestill Bord</h2>
+      <form id="bookingForm">
+        <input type="text" placeholder="Fornavn" required />
+        <input type="text" placeholder="Etternavn" required />
+        <input type="date" required />
+        <input type="time" required />
+        <input type="number" placeholder="Antall gjester" required />
+        <div class="select-menus">
+          <div class="menu-select">
+            <label for="main-dish">Valgt hovedrett:</label>
+            <select id="main-dish" name="main-dish" required>
+              <option value="">Velg en hovedrett</option>
+              <option value="Pasta Carbonara">Pasta Carbonara - 150 NOK</option>
+              <option value="Pizza Margherita">Pizza Margherita - 180 NOK</option>
+              <option value="Lasagne">Lasagne - 160 NOK</option>
+              <option value="Ravioli">Ravioli - 140 NOK</option>
+            </select>
+          </div>
+          <div class="menu-select">
+            <label for="dessert">Valgt dessert:</label>
+            <select id="dessert" name="dessert" required>
+              <option value="">Velg en dessert</option>
+              <option value="Tiramisu">Tiramisu - 90 NOK</option>
+              <option value="Panna Cotta">Panna Cotta - 95 NOK</option>
+              <option value="Gelato">Gelato - 70 NOK</option>
+              <option value="Baklava">Baklava - 75 NOK</option>
+              <option value="Ingen dessert">Ikke noe - 0 NOK</option>
+            </select>
+          </div>
+        </div>
+        <input type="submit" value="Bestill Nå" />
+      </form>
+    </section>
+
+    <script>
+      // Finn alle "Velg denne" knapper
+      const selectButtons = document.querySelectorAll(".select-item");
+      const mainDishSelect = document.getElementById("main-dish");
+      const dessertSelect = document.getElementById("dessert");
+
+      selectButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const menuItem = button.closest(".menu-item");
+          const itemName = menuItem.getAttribute("data-name");
+          const itemType = menuItem.getAttribute("data-type");
+
+          // Oppdater valgt hovedrett eller dessert i skjemaet
+          if (itemType === "main") {
+            mainDishSelect.value = itemName;
+          } else if (itemType === "dessert") {
+            dessertSelect.value = itemName;
+          }
+        });
+      });
+    </script>
+
+    <footer>
+      <p>&copy; 2024 Italiensk Uke. Alle rettigheter reservert.</p>
+      <a href="#" id="admin-link">Admin</a>
+    </footer>
+
+    <div id="admin-login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Admin Login</h2>
+        <form id="admin-login-form">
+          <input type="text" placeholder="Brukernavn" required />
+          <input type="password" placeholder="Passord" required />
+          <input type="submit" value="Logg inn" />
+        </form>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

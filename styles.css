@@ -1,0 +1,554 @@
+:root {
+  --green: #4caf50;
+  --white: #ffffff;
+  --red: #e74c3c;
+  --black: #2c3e50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+}
+
+nav {
+  background-color: var(--green);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 5px solid var(--white);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+.hero {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  animation: backgroundSlideshow 30s infinite; /* Endre animasjonens varighet etter antall bilder */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Definer animasjonen for å bytte bakgrunnsbilde */
+@keyframes backgroundSlideshow {
+  0% {
+    background-image: url("flag\ 3.jpg");
+  }
+  33% {
+    /* Improved CSS code with added comments and organization */
+
+    /* Global Styles */
+
+    :root {
+      --green: #4caf50;
+      --white: #ffffff;
+      --red: #e74c3c;
+      --black: #2c3e50;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica", sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    /* Navigation Styles */
+
+    nav {
+      background-color: var(--green);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 5px solid var(--white);
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    /* Hero Section Styles */
+
+    .hero {
+      width: 100%;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      animation: backgroundSlideshow 30s infinite; /* Endre animasjonens varighet etter antall bilder */
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Hero Overlay Styles */
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Menu Section Styles */
+
+    .menu-section {
+      padding: 60px 5%;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 40px;
+      color: var(--green);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-item {
+      background-color: var(--white);
+      padding: 20px;
+      border: 1px solid var(--green);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--red);
+    }
+
+    /* Register Section Styles */
+
+    .register-section {
+      background-color: #f4f4f4;
+      padding: 60px 5%;
+      text-align: center;
+    }
+
+    .register-section h2 {
+      margin-bottom: 30px;
+      font-size: 30px;
+      color: var(--green);
+    }
+
+    .register-section form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: var(--white);
+      padding: 30px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-section form input,
+    .register-section form select {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+
+    .select-menus {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .menu-select {
+      flex: 1;
+    }
+
+    .menu-select label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .register-section form input[type="submit"] {
+      background-color: var(--green);
+      color: var(--white);
+      border: none;
+      cursor: pointer;
+      padding: 15px;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+    }
+
+    .register-section form input[type="submit"]:hover {
+      background-color: var(--red);
+    }
+
+    /* Footer Styles */
+
+    footer {
+      background-color: var(--green);
+      color: var(--white);
+      padding: 40px 5%;
+      text-align: center;
+      border-top: 5px solid var(--red);
+    }
+
+    footer a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    footer a:hover {
+      color: var(--red);
+    }
+
+    /* Modal Styles */
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: var(--white);
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid var(--green);
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    /* Slideshow Styles */
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      height: 60vh;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* About Section Styles */
+
+    .about {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9; /* Lys bakgrunn */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skygge for dybde */
+      font-family: Arial, sans-serif;
+    }
+
+    #overskrift {
+      font-size: 24px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    .about strong {
+      color: #b22222; /* Italiensk-inspirert farge */
+      font-weight: bold;
+    }
+
+    .about p:last-child {
+      font-style: italic;
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #overskrift {
+      font-size: 50px;
+    }
+    background-image: url("flag\ 1.jpg");
+  }
+  66% {
+    background-image: url("flag.jpg");
+  }
+  100% {
+    background-image: url("flag.jpg"); /* Gå tilbake til første bilde for en sømløs loop */
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-section {
+  padding: 60px 5%;
+}
+
+.menu-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: var(--green);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.menu-item {
+  background-color: var(--white);
+  padding: 20px;
+  border: 1px solid var(--green);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+}
+
+.register-section {
+  background-color: #f4f4f4;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.register-section h2 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: var(--green);
+}
+
+.register-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-section form input,
+.register-section form select {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.select-menus {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-select {
+  flex: 1;
+}
+
+.menu-select label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.register-section form input[type="submit"] {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.register-section form input[type="submit"]:hover {
+  background-color: var(--red);
+}
+
+footer {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 40px 5%;
+  text-align: center;
+  border-top: 5px solid var(--red);
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer a:hover {
+  color: var(--red);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--green);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Lys bakgrunn */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skygge for dybde */
+  font-family: Arial, sans-serif;
+}
+
+#overskrift {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.about strong {
+  color: #b22222; /* Italiensk-inspirert farge */
+  font-weight: bold;
+}
+
+.about p:last-child {
+  font-style: italic;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#overskrift {
+  font-size: 50px;
+}
